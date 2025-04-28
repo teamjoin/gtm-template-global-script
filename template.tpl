@@ -42,8 +42,9 @@ ___TEMPLATE_PARAMETERS___
 ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
 
 const injectScript = require('injectScript');
+const encodeUri = require('encodeUri');
 
-const url = "https://" + data.owner + ".my.join-stories.com/scripts/global.js";
+const url = "https://" + encodeUri(data.owner) + ".my.join-stories.com/scripts/global.js";
 injectScript(url, data.gtmOnSuccess, data.gtmOnFailure, url);
 
 
