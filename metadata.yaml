@@ -5,3 +5,5 @@ versions:
     changeNotes: Initial release.
   - sha: ad18fe74bf401cb35d1a2844f0368f27bff8e5b0
     changeNotes: Use encodeUri.
+  - sha: 644d142f126d36ed81eae43849f65afd3806a146
+    changeNotes: Change brand display name.
