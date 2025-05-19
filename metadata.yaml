@@ -1,11 +1,13 @@
 homepage: "https://join-stories.com"
 documentation: "https://help.join-stories.com"
 versions:
-  - sha: d87afdfcbfe1c924a73f5b0c84268f25980344dc
-    changeNotes: Initial release.
-  - sha: ad18fe74bf401cb35d1a2844f0368f27bff8e5b0
-    changeNotes: Use encodeUri.
-  - sha: 644d142f126d36ed81eae43849f65afd3806a146
-    changeNotes: Change brand display name.
+  # Latest version
   - sha: 5420dca826a8080aa70d75354952a63b964d6536
     changeNotes: Add help information.
+  # Previous version
+  - sha: 644d142f126d36ed81eae43849f65afd3806a146
+    changeNotes: Change brand display name.
+  - sha: ad18fe74bf401cb35d1a2844f0368f27bff8e5b0
+    changeNotes: Use encodeUri.
+  - sha: d87afdfcbfe1c924a73f5b0c84268f25980344dc
+    changeNotes: Initial release.
