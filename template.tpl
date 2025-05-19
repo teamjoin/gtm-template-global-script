@@ -1,20 +1,16 @@
-﻿___TERMS_OF_SERVICE___
-
-By creating or modifying this file you agree to Google Tag Manager's Community
-Template Gallery Developer Terms of Service available at
-https://developers.google.com/tag-manager/gallery-tos (or such other URL as
-Google may provide), as modified from time to time.
-
-
-___INFO___
+﻿___INFO___
 
 {
   "type": "TAG",
   "id": "cvt_temp_public_id",
   "version": 1,
   "securityGroups": [],
-  "displayName": "Join Stories - Global Script",
-  "categories": ["ANALYTICS", "MARKETING", "SESSION_RECORDING"],
+  "displayName": "Join Stories - Global Script (local)",
+  "categories": [
+    "ANALYTICS",
+    "MARKETING",
+    "SESSION_RECORDING"
+  ],
   "brand": {
     "id": "brand_dummy",
     "displayName": "Join Stories",
@@ -33,8 +29,13 @@ ___TEMPLATE_PARAMETERS___
   {
     "type": "TEXT",
     "name": "owner",
-    "displayName": "",
-    "simpleValueType": true
+    "displayName": "Join ID",
+    "simpleValueType": true,
+    "valueValidators": [
+      {
+        "type": "NON_EMPTY"
+      }
+    ]
   }
 ]
 
@@ -43,9 +44,22 @@ ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
 
 const injectScript = require('injectScript');
 const encodeUri = require('encodeUri');
+const logToConsole = require('logToConsole');
 
 const url = "https://" + encodeUri(data.owner) + ".my.join-stories.com/scripts/global.js";
-injectScript(url, data.gtmOnSuccess, data.gtmOnFailure, url);
+
+function onSuccess() {
+  logToConsole('[Success] Join Stories - Global Script');
+  data.gtmOnSuccess();
+}
+
+function onFailure() {
+  logToConsole('[Failed] Join Stories - Global Script');
+  data.gtmOnFailure();
+}
+
+
+injectScript(url, onSuccess, onFailure, url);
 
 
 ___WEB_PERMISSIONS___
@@ -68,6 +82,27 @@ ___WEB_PERMISSIONS___
                 "string": "https://*.my.join-stories.com/scripts/global.js"
               }
             ]
+          }
+        }
+      ]
+    },
+    "clientAnnotations": {
+      "isEditedByUser": true
+    },
+    "isRequired": true
+  },
+  {
+    "instance": {
+      "key": {
+        "publicId": "logging",
+        "versionId": "1"
+      },
+      "param": [
+        {
+          "key": "environments",
+          "value": {
+            "type": 1,
+            "string": "all"
           }
         }
       ]
