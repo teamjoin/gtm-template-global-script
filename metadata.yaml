@@ -2,9 +2,11 @@ homepage: "https://join-stories.com"
 documentation: "https://help.join-stories.com"
 versions:
   # Latest version
-  - sha: 5420dca826a8080aa70d75354952a63b964d6536
-    changeNotes: Add help information.
-  # Previous version
+  - sha: 96f8e8d7a1804e569168ff1492f826c11533da2e
+    changeNotes: New release.
+    # Previous version
+    - sha: 5420dca826a8080aa70d75354952a63b964d6536
+      changeNotes: Add help information.
   - sha: 644d142f126d36ed81eae43849f65afd3806a146
     changeNotes: Change brand display name.
   - sha: ad18fe74bf401cb35d1a2844f0368f27bff8e5b0
