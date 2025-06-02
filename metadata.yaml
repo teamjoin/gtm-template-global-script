@@ -1,10 +1,8 @@
 homepage: "https://join-stories.com"
 documentation: "https://help.join-stories.com"
 versions:
-  # Latest version
   - sha: cf514d5d0edd96e02d63a1fb68c901f92613098a
     changeNotes: Fix metadata.
-  # Previous version
   - sha: 96f8e8d7a1804e569168ff1492f826c11533da2e
     changeNotes: New release.
   - sha: 5420dca826a8080aa70d75354952a63b964d6536
