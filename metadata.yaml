@@ -1,7 +1,7 @@
 homepage: "https://join-stories.com"
 documentation: "https://help.join-stories.com"
 versions:
-  - sha: 474029f31650bb14af4b16b5ac44cc23a77d1f6c
+  - sha: 194396d179146512422f149d3337f706ff724363
     changeNotes: Add terms of service.
   - sha: cf514d5d0edd96e02d63a1fb68c901f92613098a
     changeNotes: Fix metadata.
